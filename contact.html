@@ -95,7 +95,13 @@
  <div class="contact-form-wrapper">
  <div class="form-card">
  <h3>Send us a Message</h3>
- <form class="contact-form" id="contactForm">
+ <!-- Formspree Contact Form - Replace FORMSPREE_ID with your actual form ID -->
+ <form class="contact-form" id="contactForm" action="https://formspree.io/f/FORMSPREE_ID" method="POST">
+ <!-- Hidden field to redirect after submission -->
+ <input type="hidden" name="_next" value="https://ai-solutions-hub-enhanced.vercel.app/contact.html?submitted=true">
+ <!-- Hidden field for email subject -->
+ <input type="hidden" name="_subject" value="New Contact Form Submission - AI Solutions Hub">
+ 
  <div class="form-group">
  <label for="name">Full Name *</label>
  <input type="text" id="name" name="name" required placeholder="Your name">
@@ -115,13 +121,13 @@
  <label for="service">Service Interest</label>
  <select id="service" name="service">
  <option value="">Select a service...</option>
- <option value="strategy">AI Strategy Consulting</option>
- <option value="ml">Machine Learning Solutions</option>
- <option value="automation">Process Automation</option>
- <option value="cloud">Cloud AI Integration</option>
- <option value="security">AI Security & Compliance</option>
- <option value="training">AI Training & Support</option>
- <option value="other">Other</option>
+ <option value="AI Strategy Consulting">AI Strategy Consulting</option>
+ <option value="Machine Learning Solutions">Machine Learning Solutions</option>
+ <option value="Process Automation">Process Automation</option>
+ <option value="Cloud AI Integration">Cloud AI Integration</option>
+ <option value="AI Security & Compliance">AI Security & Compliance</option>
+ <option value="AI Training & Support">AI Training & Support</option>
+ <option value="Other">Other</option>
  </select>
  </div>
  
@@ -130,15 +136,24 @@
  <textarea id="message" name="message" rows="5" required placeholder="Tell us about your project..."></textarea>
  </div>
  
- <button type="submit" class="btn btn-primary btn-full">
+ <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
  <i class="fas fa-paper-plane"></i> Send Message
  </button>
  </form>
  
+ <!-- Success Message (shown after submission) -->
  <div class="form-success" id="formSuccess" style="display: none;">
  <i class="fas fa-check-circle"></i>
  <h4>Message Sent!</h4>
  <p>Thank you for reaching out. We'll get back to you within 24 hours.</p>
+ <a href="index.html" class="btn btn-outline" style="margin-top: 1.5rem;">Back to Home</a>
+ </div>
+ 
+ <!-- Error Message -->
+ <div class="form-error" id="formError" style="display: none; text-align: center; padding: 2rem;">
+ <i class="fas fa-exclamation-circle" style="font-size: 3rem; color: #ff6b6b; margin-bottom: 1rem;"></i>
+ <h4>Oops! Something went wrong.</h4>
+ <p>Please try again or email us directly at aisolutionshub.office@gmail.com</p>
  </div>
  </div>
  </div>

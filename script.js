@@ -140,41 +140,40 @@ function animateCounter(element, target) {
  }, stepTime);
 }
 
-/* Contact Form Handling */
+/* Contact Form Handling - Formspree Integration */
 function initContactForm() {
  const form = document.getElementById('contactForm');
  const formSuccess = document.getElementById('formSuccess');
+ const formError = document.getElementById('formError');
+ const submitBtn = document.getElementById('submitBtn');
  
  if (!form) return;
  
+ // Check if form was submitted (Formspree redirect back with ?submitted=true)
+ const urlParams = new URLSearchParams(window.location.search);
+ if (urlParams.get('submitted') === 'true') {
+ form.style.display = 'none';
+ formSuccess.style.display = 'block';
+ // Clean up URL
+ window.history.replaceState({}, document.title, window.location.pathname);
+ }
+ 
  form.addEventListener('submit', function(e) {
+ // Check if Formspree ID has been replaced
+ const formAction = form.getAttribute('action');
+ if (formAction.includes('FORMSPREE_ID')) {
  e.preventDefault();
+ alert('Please set up your Formspree form ID first!\n\n1. Go to https://formspree.io and create a free account\n2. Create a new form\n3. Copy your form endpoint (looks like: https://formspree.io/f/xnqevjdr)\n4. Replace FORMSPREE_ID in the HTML with your actual form ID');
+ return;
+ }
  
- // Get form data
- const formData = new FormData(form);
- const data = Object.fromEntries(formData);
- 
- // Simulate form submission
- const submitBtn = form.querySelector('button[type="submit"]');
+ // Show loading state
  const originalText = submitBtn.innerHTML;
  submitBtn.innerHTML = '<span class="loading"></span> Sending...';
  submitBtn.disabled = true;
  
- // Simulate API call
- setTimeout(() => {
- // Hide form, show success
- form.style.display = 'none';
- formSuccess.style.display = 'block';
- 
- // Reset form after delay
- setTimeout(() => {
- form.reset();
- form.style.display = 'block';
- formSuccess.style.display = 'none';
- submitBtn.innerHTML = originalText;
- submitBtn.disabled = false;
- }, 3000);
- }, 1500);
+ // Form will submit normally to Formspree
+ // The _next hidden field handles the redirect back
  });
 }
 
