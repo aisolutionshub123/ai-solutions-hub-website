@@ -1,246 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Solutions Hub | Enterprise AI Consulting</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>AI Solutions Hub | Enterprise AI Consulting</title>
+ <meta name="description" content="Transform your business with AI Solutions Hub. Seven specialized AI departments delivering enterprise-grade solutions.">
+ <link rel="stylesheet" href="styles.css">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="index.html" class="logo">
-                <i class="fas fa-brain"></i>
-                <span>AI Solutions Hub</span>
-            </a>
-            <ul class="nav-links">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="departments.html">Departments</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
+ <!-- Navigation -->
+ <nav class="navbar" id="navbar">
+ <div class="container">
+ <a href="index.html" class="logo">
+ <i class="fas fa-brain"></i>
+ <span>AI Solutions Hub</span>
+ </a>
+ <ul class="nav-links" id="navLinks">
+ <li><a href="index.html" class="active">Home</a></li>
+ <li><a href="about.html">About</a></li>
+ <li><a href="services.html">Services</a></li>
+ <li><a href="departments.html">Departments</a></li>
+ <li><a href="contact.html">Contact</a></li>
+ </ul>
+ <div class="hamburger" id="hamburger">
+ <span></span>
+ <span></span>
+ <span></span>
+ </div>
+ </div>
+ </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-bg"></div>
-        <div class="container">
-            <div class="hero-content">
-                <h1>Transform Your Business with <span class="gradient-text">Intelligent AI</span></h1>
-                <p class="hero-subtitle">Seven specialized AI departments working in harmony to deliver enterprise-grade solutions that drive innovation, efficiency, and growth.</p>
-                <div class="hero-cta">
-                    <a href="services.html" class="btn btn-primary">Explore Services</a>
-                    <a href="contact.html" class="btn btn-secondary">Get in Touch</a>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <div class="floating-cards">
-                    <div class="float-card" style="--delay: 0s;">
-                        <i class="fas fa-robot"></i>
-                        <span>AI Automation</span>
-                    </div>
-                    <div class="float-card" style="--delay: 0.5s;">
-                        <i class="fas fa-chart-line"></i>
-                        <span>Data Analytics</span>
-                    </div>
-                    <div class="float-card" style="--delay: 1s;">
-                        <i class="fas fa-shield-alt"></i>
-                        <span>Security</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="scroll-indicator">
-            <i class="fas fa-chevron-down"></i>
-        </div>
-    </section>
+ <!-- Hero Section -->
+ <section class="hero">
+ <div class="container">
+ <div class="hero-content">
+ <h1>Transform Your Business with <span class="highlight">Intelligent AI</span></h1>
+ <p class="hero-subtitle">Seven specialized AI departments working in harmony to deliver enterprise-grade solutions that drive innovation, efficiency, and growth.</p>
+ <div class="hero-cta">
+ <a href="services.html" class="btn btn-primary">
+ <i class="fas fa-rocket"></i> Explore Services
+ </a>
+ <a href="contact.html" class="btn btn-secondary">
+ <i class="fas fa-envelope"></i> Get in Touch
+ </a>
+ </div>
+ </div>
+ <div class="hero-visual">
+ <div class="hero-image-container">
+ <div class="hero-image-glow"></div>
+ <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop" alt="AI Technology Visualization" class="hero-image">
+ <div class="floating-cards">
+ <div class="float-card" style="--delay: 0s;">
+ <i class="fas fa-robot"></i>
+ <span>AI Automation</span>
+ </div>
+ <div class="float-card" style="--delay: 0.5s;">
+ <i class="fas fa-chart-line"></i>
+ <span>Data Analytics</span>
+ </div>
+ <div class="float-card" style="--delay: 1s;">
+ <i class="fas fa-shield-alt"></i>
+ <span>Security</span>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div class="scroll-indicator" onclick="document.getElementById('stats').scrollIntoView({behavior: 'smooth'})">
+ <i class="fas fa-chevron-down"></i>
+ </div>
+ </section>
 
-    <!-- Stats Section -->
-    <section class="stats">
-        <div class="container">
-            <div class="stat-grid">
-                <div class="stat-item">
-                    <div class="stat-number" data-count="500">0</div>
-                    <div class="stat-label">Projects Delivered</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number" data-count="50">0</div>
-                    <div class="stat-label">Enterprise Clients</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number" data-count="7">0</div>
-                    <div class="stat-label">AI Departments</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number" data-count="99">0</div>
-                    <div class="stat-label">% Satisfaction</div>
-                </div>
-            </div>
-        </div>
-    </section>
+ <!-- Stats Section -->
+ <section class="stats" id="stats">
+ <div class="container">
+ <div class="stat-grid">
+ <div class="stat-item">
+ <div class="stat-number" data-count="500">0</div>
+ <div class="stat-label">Projects Delivered</div>
+ </div>
+ <div class="stat-item">
+ <div class="stat-number" data-count="50">0</div>
+ <div class="stat-label">Enterprise Clients</div>
+ </div>
+ <div class="stat-item">
+ <div class="stat-number" data-count="7">0</div>
+ <div class="stat-label">AI Departments</div>
+ </div>
+ <div class="stat-item">
+ <div class="stat-number" data-count="99">0</div>
+ <div class="stat-label">% Satisfaction</div>
+ </div>
+ </div>
+ </div>
+ </section>
 
-    <!-- Services Preview -->
-    <section class="services-preview">
-        <div class="container">
-            <div class="section-header">
-                <h2>Our Core Services</h2>
-                <p>Comprehensive AI solutions tailored to your business needs</p>
-            </div>
-            <div class="service-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <h3>AI Strategy Consulting</h3>
-                    <p>Develop comprehensive AI roadmaps aligned with your business objectives and market opportunities.</p>
-                    <a href="services.html" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-cogs"></i>
-                    </div>
-                    <h3>Custom AI Development</h3>
-                    <p>Build bespoke AI solutions from machine learning models to intelligent automation systems.</p>
-                    <a href="services.html" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-cloud"></i>
-                    </div>
-                    <h3>Cloud AI Integration</h3>
-                    <p>Seamlessly integrate AI capabilities into your existing cloud infrastructure and workflows.</p>
-                    <a href="services.html" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-            <div class="text-center">
-                <a href="services.html" class="btn btn-outline">View All Services</a>
-            </div>
-        </div>
-    </section>
+ <!-- Services Preview -->
+ <section class="services-preview">
+ <div class="container">
+ <div class="section-header">
+ <h2>Our Core <span class="gradient-text">Services</span></h2>
+ <p>Comprehensive AI solutions tailored to your business needs</p>
+ </div>
+ <div class="service-grid">
+ <div class="service-card">
+ <div class="service-icon">
+ <i class="fas fa-brain"></i>
+ </div>
+ <h3>AI Strategy Consulting</h3>
+ <p>Develop comprehensive AI roadmaps aligned with your business objectives and market opportunities.</p>
+ <a href="services.html" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
+ </div>
+ <div class="service-card">
+ <div class="service-icon">
+ <i class="fas fa-cogs"></i>
+ </div>
+ <h3>Custom AI Development</h3>
+ <p>Build bespoke AI solutions from machine learning models to intelligent automation systems.</p>
+ <a href="services.html" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
+ </div>
+ <div class="service-card">
+ <div class="service-icon">
+ <i class="fas fa-cloud"></i>
+ </div>
+ <h3>Cloud AI Integration</h3>
+ <p>Seamlessly integrate AI capabilities into your existing cloud infrastructure and workflows.</p>
+ <a href="services.html" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
+ </div>
+ </div>
+ <div class="text-center">
+ <a href="services.html" class="btn btn-outline">View All Services</a>
+ </div>
+ </div>
+ </section>
 
-    <!-- Departments Preview -->
-    <section class="departments-preview">
-        <div class="container">
-            <div class="section-header light">
-                <h2>The Seven Departments</h2>
-                <p>Each specializing in a critical domain of AI excellence</p>
-            </div>
-            <div class="dept-showcase">
-                <div class="dept-item">
-                    <div class="dept-icon">🏛️</div>
-                    <h4>HERMES</h4>
-                    <p>Orchestration</p>
-                </div>
-                <div class="dept-item">
-                    <div class="dept-icon">🦉</div>
-                    <h4>ATHENA</h4>
-                    <p>Research</p>
-                </div>
-                <div class="dept-item">
-                    <div class="dept-icon">🔨</div>
-                    <h4>HEPHAESTUS</h4>
-                    <p>Engineering</p>
-                </div>
-                <div class="dept-item">
-                    <div class="dept-icon">☀️</div>
-                    <h4>APOLLO</h4>
-                    <p>Content</p>
-                </div>
-                <div class="dept-item">
-                    <div class="dept-icon">🛡️</div>
-                    <h4>AEGIS</h4>
-                    <p>Security</p>
-                </div>
-                <div class="dept-item">
-                    <div class="dept-icon">💰</div>
-                    <h4>PLUTUS</h4>
-                    <p>Finance</p>
-                </div>
-                <div class="dept-item">
-                    <div class="dept-icon">🌈</div>
-                    <h4>IRIS</h4>
-                    <p>Sales</p>
-                </div>
-                <div class="dept-item">
-                    <div class="dept-icon">⏰</div>
-                    <h4>CRONOS</h4>
-                    <p>Automation</p>
-                </div>
-            </div>
-            <div class="text-center">
-                <a href="departments.html" class="btn btn-light">Meet Our Teams</a>
-            </div>
-        </div>
-    </section>
+ <!-- Departments Preview -->
+ <section class="departments-preview">
+ <div class="container">
+ <div class="section-header light">
+ <h2>The Seven <span class="gradient-text">Departments</span></h2>
+ <p>Each specializing in a critical domain of AI excellence</p>
+ </div>
+ <div class="dept-showcase">
+ <div class="dept-item">
+ <div class="dept-icon">🏛️</div>
+ <h4>HERMES</h4>
+ <p>Orchestration</p>
+ </div>
+ <div class="dept-item">
+ <div class="dept-icon">🦉</div>
+ <h4>ATHENA</h4>
+ <p>Research</p>
+ </div>
+ <div class="dept-item">
+ <div class="dept-icon">🔨</div>
+ <h4>HEPHAESTUS</h4>
+ <p>Engineering</p>
+ </div>
+ <div class="dept-item">
+ <div class="dept-icon">☀️</div>
+ <h4>APOLLO</h4>
+ <p>Content</p>
+ </div>
+ <div class="dept-item">
+ <div class="dept-icon">🛡️</div>
+ <h4>AEGIS</h4>
+ <p>Security</p>
+ </div>
+ <div class="dept-item">
+ <div class="dept-icon">💰</div>
+ <h4>PLUTUS</h4>
+ <p>Finance</p>
+ </div>
+ <div class="dept-item">
+ <div class="dept-icon">🌈</div>
+ <h4>IRIS</h4>
+ <p>Sales</p>
+ </div>
+ <div class="dept-item">
+ <div class="dept-icon">⏰</div>
+ <h4>CRONOS</h4>
+ <p>Automation</p>
+ </div>
+ </div>
+ <div class="text-center">
+ <a href="departments.html" class="btn btn-light">Meet Our Teams</a>
+ </div>
+ </div>
+ </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-box">
-                <h2>Ready to Transform Your Business?</h2>
-                <p>Let's discuss how our AI solutions can drive your success</p>
-                <a href="contact.html" class="btn btn-primary btn-large">Start Your Journey</a>
-            </div>
-        </div>
-    </section>
+ <!-- CTA Section -->
+ <section class="cta-section">
+ <div class="container">
+ <div class="cta-box">
+ <h2>Ready to Transform Your Business?</h2>
+ <p>Let's discuss how our AI solutions can drive your success</p>
+ <a href="contact.html" class="btn btn-primary btn-large">
+ <i class="fas fa-paper-plane"></i> Start Your Journey
+ </a>
+ </div>
+ </div>
+ </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <div class="logo">
-                        <i class="fas fa-brain"></i>
-                        <span>AI Solutions Hub</span>
-                    </div>
-                    <p>Seven departments. One mission. Infinite possibilities.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-github"></i></a>
-                    </div>
-                </div>
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Departments</h4>
-                    <ul>
-                        <li><a href="departments.html#athena">ATHENA Research</a></li>
-                        <li><a href="departments.html#hephaestus">HEPHAESTUS Engineering</a></li>
-                        <li><a href="departments.html#apollo">APOLLO Content</a></li>
-                        <li><a href="departments.html#aegis">AEGIS Security</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h4>Contact</h4>
-                    <p><i class="fas fa-envelope"></i> aisolutionshub.office@gmail.com</p>
-                    <p><i class="fas fa-globe"></i> www.aisolutionshub.com</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 AI Solutions Hub. All rights reserved.</p>
-                <p class="deploy-badge"><i class="fas fa-rocket"></i> Deployed on Vercel</p>
-            </div>
-        </div>
-    </footer>
+ <!-- Footer -->
+ <footer class="footer">
+ <div class="container">
+ <div class="footer-grid">
+ <div class="footer-brand">
+ <div class="logo">
+ <i class="fas fa-brain"></i>
+ <span>AI Solutions Hub</span>
+ </div>
+ <p>Seven departments. One mission. Infinite possibilities.</p>
+ <div class="social-links">
+ <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+ <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+ <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+ </div>
+ </div>
+ <div class="footer-links">
+ <h4>Quick Links</h4>
+ <ul>
+ <li><a href="index.html">Home</a></li>
+ <li><a href="about.html">About</a></li>
+ <li><a href="services.html">Services</a></li>
+ <li><a href="contact.html">Contact</a></li>
+ </ul>
+ </div>
+ <div class="footer-links">
+ <h4>Departments</h4>
+ <ul>
+ <li><a href="departments.html#athena">ATHENA Research</a></li>
+ <li><a href="departments.html#hephaestus">HEPHAESTUS Engineering</a></li>
+ <li><a href="departments.html#apollo">APOLLO Content</a></li>
+ <li><a href="departments.html#aegis">AEGIS Security</a></li>
+ </ul>
+ </div>
+ <div class="footer-contact">
+ <h4>Contact</h4>
+ <p><i class="fas fa-envelope"></i> aisolutionshub.office@gmail.com</p>
+ <p><i class="fas fa-globe"></i> www.aisolutionshub.com</p>
+ </div>
+ </div>
+ <div class="footer-bottom">
+ <p>&copy; 2026 AI Solutions Hub. All rights reserved.</p>
+ <p class="deploy-badge"><i class="fas fa-rocket"></i> Deployed on Vercel</p>
+ </div>
+ </div>
+ </footer>
 
-    <script src="script.js"></script>
+ <script src="script.js"></script>
 </body>
 </html>
